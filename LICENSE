@@ -1,0 +1,65 @@
+ARGUS (TM) - LICENCE D'UTILISATION
+Copyright (c) 2026 skyllon. Tous droits reserves.
+Contact : https://github.com/skyllon
+Empreinte de provenance : ARGUS-PB-2026-8de20fbe89
+
+Argus designe le protocole operationnel pour Claude Code et les skills
+associes (/argus), tels que reunis dans ce paquet : le fichier argus/SKILL.md
+et la presente documentation. C'est une oeuvre originale, proprietaire, de
+skyllon.
+
+Cette licence vous accorde des droits limites. Tout ce qui n'est pas
+expressement autorise ci-dessous est reserve.
+
+1. CE QUI EST AUTORISE, SANS FRAIS
+   a. Utiliser Argus pour votre propre usage, personnel ou interne.
+   b. Le modifier et l'adapter a votre propre environnement.
+   c. En conserver des copies de sauvegarde.
+
+2. REDISTRIBUTION
+   La redistribution d'Argus, tel quel ou modifie, en tout ou en partie, n'est
+   autorisee qu'aux conditions CUMULATIVES suivantes :
+   a. Conserver intact l'avis de copyright present dans chaque fichier.
+   b. Joindre une copie integrale de la presente licence.
+   c. Conserver l'empreinte de provenance "ARGUS-PB-2026-8de20fbe89" dans les
+      fichiers qui la portent.
+   d. Indiquer clairement et de bonne foi toute modification apportee, ainsi que
+      son auteur et sa date.
+   e. Mentionner skyllon comme auteur d'origine d'Argus.
+
+3. CE QUI EST INTERDIT
+   a. Revendiquer la paternite d'Argus, ou le presenter, directement ou
+      implicitement, comme votre propre creation.
+   b. Retirer, masquer, falsifier ou alterer l'avis de copyright, la mention
+      d'auteur ou l'empreinte de provenance.
+   c. Vendre Argus, le sous-licencier, ou l'integrer dans un produit, un service
+      ou une offre commerciale (y compris une prestation de conseil facturee
+      dont Argus serait un livrable ou un argument), sans accord ecrit prealable
+      de skyllon.
+   d. Deposer ou tenter de deposer une marque, un nom de domaine ou un droit de
+      propriete intellectuelle reprenant le nom "Argus" en lien avec ce travail.
+
+4. MARQUE
+   "Argus" (dans ce contexte) est utilise comme signe distinctif de ce travail.
+   Cette licence ne confere aucun droit sur ce nom au-dela de l'attribution
+   exigee a l'article 2.
+
+5. PROVENANCE ET PREUVE D'ORIGINE
+   Le paquet est scelle par les empreintes SHA-256 listees dans PROVENANCE.md et
+   par le marqueur de provenance present dans les fichiers. Ces elements servent
+   a etablir l'origine d'une copie. Leur retrait ou leur alteration constitue une
+   violation caracterisee de la presente licence.
+
+6. ABSENCE DE GARANTIE
+   Argus est fourni "en l'etat", sans garantie d'aucune sorte, expresse ou
+   implicite. L'auteur ne pourra etre tenu responsable d'un quelconque dommage
+   resultant de son utilisation.
+
+7. RESILIATION
+   Tout manquement aux articles 2 ou 3 met fin automatiquement et immediatement
+   aux droits accordes par cette licence, sans prejudice des recours de l'auteur.
+
+8. DROIT APPLICABLE
+   La presente licence est regie par le droit francais. Pour toute autorisation
+   particuliere (usage commercial, redistribution etendue, partenariat) :
+   https://github.com/skyllon

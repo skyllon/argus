@@ -1,0 +1,3 @@
+# Fins de ligne LF forcees partout : le paquet est scelle par SHA-256
+# (PROVENANCE.sha256) et une conversion CRLF au checkout casserait la verification.
+* text eol=lf
