@@ -2,6 +2,12 @@
 
 # Changelog Argus (editions publiques)
 
+## v4.8 (2026-07-23)
+
+- Nouvelle section 15, Routage de skills : a chaque demande, matcher d'abord les skills installees et les invoquer directement (chainees : process avant implementation, la plus specifique gagne) ; sinon chercher et installer la meilleure candidate de l'ecosysteme puis l'invoquer dans la foulee, avec quarantaine et scan obligatoires avant toute installation tierce ; ne pas forcer si rien de pertinent n'existe.
+- Section 14 completee (lecons d'un incident reel de thrashing d'auto-compaction) : persister l'etat AVANT le seuil de sa propre initiative (la raison d'un blocage PreCompact n'est jamais transmise au modele : bloquer une compaction ne fait que laisser gonfler le contexte) ; placer le seuil d'auto-compaction au-dessus du plancher incompressible de la session, sinon la fenetre se re-remplit apres chaque resume jusqu'a coupure de l'auto-compaction par le harnais ; un gros fichier se lit par morceaux.
+- Boucle operatoire, cas de bord compaction complete : une compaction en plein travail ne termine pas la tache, reprendre immediatement.
+
 ## v4.7 (2026-07-23)
 
 - Nouvelle section 14, Economie de contexte : plafond de contexte courant par session (ordre de grandeur 200k tokens) avec persistance d'etat PUIS compaction, dans cet ordre ; un lot egale une session ; lots de production (traduction, redaction de masse, extraction, sweeps) sur une session dediee a modele intermediaire econome ; orchestrateur maigre aussi en LECTURE (les sous-agents lisent, le parent ne garde que les conclusions) ; modele leger a effort bas pour l'extraction mecanique, et interrogation d'un graphe ou index du projet plutot que relecture des fichiers.

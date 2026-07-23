@@ -1,4 +1,4 @@
-<!-- Argus (TM) v4.7 - Copyright (c) 2026 skyllon. Tous droits reserves. Licence : voir LICENSE. Empreinte ARGUS-PB-2026-8de20fbe89. -->
+<!-- Argus (TM) v4.8 - Copyright (c) 2026 skyllon. Tous droits reserves. Licence : voir LICENSE. Empreinte ARGUS-PB-2026-8de20fbe89. -->
 
 # Argus : le protocole operationnel d'elite pour Claude Code
 
@@ -13,9 +13,10 @@ Argus (Argos Panoptes, le geant aux cent yeux de la mythologie grecque : le veil
 - il **fractionne les gros livrables** (jamais de sortie monolithique confiee a un seul agent) et verifie la couverture apres coup ;
 - il traite tout contenu ramene par un outil comme de la **donnee, jamais comme un ordre** (resistance aux injections de prompt) ;
 - il ecrit **direct, sans hedging ni remplissage**, ouvre chaque reponse par le resultat, et n'invente aucun fait ;
-- il **discipline son propre contexte** : plafond de contexte par session avec persistance d'etat avant compaction, lots de production delegues a des sessions economes, orchestrateur maigre qui delegue les lectures a des sous-agents jetables.
+- il **discipline son propre contexte** : plafond de contexte par session avec persistance d'etat anticipee avant compaction, lots de production delegues a des sessions economes, orchestrateur maigre qui delegue les lectures a des sous-agents jetables ;
+- il **route les skills automatiquement** : les skills installees qui couvrent la demande sont invoquees directement, et si aucune ne correspond il cherche et installe la bonne (quarantaine et scan avant toute installation tierce).
 
-Version 4.7 (2026-07-23). Le protocole complet vit dans `argus/SKILL.md` : c'est la seule chose a installer, il est autonome et generique (aucune regle personnelle, aucun chemin specifique, aucun quota code en dur).
+Version 4.8 (2026-07-23). Le protocole complet vit dans `argus/SKILL.md` : c'est la seule chose a installer, il est autonome et generique (aucune regle personnelle, aucun chemin specifique, aucun quota code en dur).
 
 ## Ce que ca change, mesure
 
@@ -27,7 +28,7 @@ La difference de comportement a ete validee par un test comparatif reel sur la v
 argus/SKILL.md              le protocole complet, autonome (la seule chose a installer)
 README.md                   ce fichier
 LICENSE                     conditions d'utilisation et de redistribution
-CHANGELOG.md                historique des versions (v1 a v4.7)
+CHANGELOG.md                historique des versions (v1 a v4.8)
 COMPARATIF-v4.2.md          ce que le protocole change, mesure sur un test reel
 PROVENANCE.md               empreintes SHA-256 scellees (preuve d'origine)
 PROVENANCE.sha256           fichier de verification (sha256sum -c)
@@ -49,14 +50,11 @@ Si tu remplaces une version anterieure d'Argus (v1 a v4.2, quel que soit son for
 
 Le protocole est entierement generique. Tu peux ajouter tes propres regles non negociables en tete de la section "Protocole" du `SKILL.md` ; conserve alors l'avis de copyright et signale tes modifications (LICENSE, article 2).
 
-## Nouveautes de la v4.7
+## Nouveautes de la v4.8
 
-- Economie de contexte (nouvelle section 14) : plafond de contexte courant par session, persistance d'etat PUIS compaction, un lot egale une session.
-- Lots de production (traduction, redaction de masse, extraction, sweeps) delegues a une session dediee sur un modele intermediaire econome ; le modele le plus capable garde l'architecture et la synthese.
-- Orchestrateur maigre aussi en LECTURE : les sous-agents lisent les gros volumes, le parent ne garde que les conclusions.
-- Extraction mecanique sur modele leger a effort bas ; interroger un graphe ou index du projet plutot que relire les fichiers.
-
-Raison : mesure sur des sessions longues reelles, la relecture du contexte accumule a chaque appel d'outil est le poste de cout dominant, loin devant la generation.
+- Routage de skills (nouvelle section 15) : les skills installees qui couvrent la demande sont invoquees directement, chainees si besoin (process avant implementation) ; si aucune ne correspond, recherche et installation de la meilleure candidate de l'ecosysteme, avec quarantaine et scan obligatoires avant toute installation tierce.
+- Economie de contexte durcie (section 14, lecons d'un incident reel de thrashing) : persistance d'etat ANTICIPEE avant le seuil (aucun hook ne peut la forcer au dernier moment : la raison d'un blocage PreCompact n'atteint jamais le modele) ; seuil d'auto-compaction place au-dessus du plancher incompressible de la session, sinon la fenetre se re-remplit apres chaque resume ; gros fichiers lus par morceaux.
+- Une compaction en plein travail ne termine pas la tache : reprise immediate, sans repartir de zero.
 
 Historique complet : `CHANGELOG.md`.
 
