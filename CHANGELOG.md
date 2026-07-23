@@ -2,6 +2,11 @@
 
 # Changelog Argus (editions publiques)
 
+## v4.7 (2026-07-23)
+
+- Nouvelle section 14, Economie de contexte : plafond de contexte courant par session (ordre de grandeur 200k tokens) avec persistance d'etat PUIS compaction, dans cet ordre ; un lot egale une session ; lots de production (traduction, redaction de masse, extraction, sweeps) sur une session dediee a modele intermediaire econome ; orchestrateur maigre aussi en LECTURE (les sous-agents lisent, le parent ne garde que les conclusions) ; modele leger a effort bas pour l'extraction mecanique, et interrogation d'un graphe ou index du projet plutot que relecture des fichiers.
+- Motivation mesuree : sur une session longue, la relecture du contexte accumule a chaque appel d'outil devient le poste de cout dominant, loin devant la generation elle-meme.
+
 ## v4.6 (2026-07-15)
 
 - Boucle operatoire : test binaire du biais vers l'action ; signalement explicite des hypotheses qui devient la trajectoire ; cas de bord (message recu pendant l'execution : remplace ou complete ; reprise apres compaction de contexte ; une demande de persistance n'elargit pas les actions autorisees).
