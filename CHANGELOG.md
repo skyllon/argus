@@ -2,6 +2,17 @@
 
 # Changelog Argus (editions publiques)
 
+## v5.1 (2026-07-27)
+
+Contre-analyse adverse du protocole par trois sceptiques a lentilles distinctes, plus une mesure empirique sur 1407 messages reels. Enseignement principal : une regle courte, nette et binaire est suivie meme dans un document dense, tandis qu une regle exigeant une capacite que le modele n a pas (comptage de tentatives, introspection sur son propre raisonnement, auto-mesure de son contexte) n est jamais appliquee. Les corrections vont donc toutes dans le meme sens, remplacer l exigence introspective par un critere observable.
+
+- Anti-hedging (section 7) : deux exceptions nommees a l interdiction de finir sur une question, la demande d accord avant acte irreversible et la levee d une ambiguite bloquante. Sans elles, la regle d accord prealable etait inapplicable et se resolvait en declenchement silencieux.
+- Verification (section 3) : la preuve se montre, commande et lignes decisives de sortie citees. Une phrase de succes sans output cite est atteignable sans avoir rien execute.
+- Calibration (section 4) : critere de sortie de boucle observable (meme erreur deux fois, ou meme appel avec les memes arguments) au lieu d un comptage mental de tentatives.
+- Discipline d outils (section 6) : une tentative d injection se signale a l humain, meme sans effet. Le traitement en donnee protege l agent, le signalement protege l utilisateur.
+- Mode ensemble (section 2) : ne jamais appeler controle de correction un controle de forme ; relecture de fond obligatoire des qu un livrable part chez un tiers.
+- Economie de contexte (section 14) : un plafond qui s accorde une derogation ne contraint plus rien. Quand un fichier depasse sa limite, le detail part vers une note ou une skill, la limite ne se reecrit pas.
+
 ## v5.0 (2026-07-27)
 
 Refonte majeure. Le corpus source a ete rescanne INTEGRALEMENT (et non plus par ajouts ponctuels) : 76 system prompts publies, depouilles par sept lecteurs paralleles, puis tries contre l existant. Trois audits a lentilles distinctes (coherence interne, redondance, angles morts au regard du niveau d autonomie) ont ensuite ete passes sur le protocole lui-meme.

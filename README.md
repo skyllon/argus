@@ -1,4 +1,4 @@
-<!-- Argus (TM) v5.0 - Copyright (c) 2026 skyllon. Tous droits reserves. Licence : voir LICENSE. Empreinte ARGUS-PB-2026-8de20fbe89. -->
+<!-- Argus (TM) v5.1 - Copyright (c) 2026 skyllon. Tous droits reserves. Licence : voir LICENSE. Empreinte ARGUS-PB-2026-8de20fbe89. -->
 
 # Argus : le protocole operationnel d'elite pour Claude Code
 
@@ -28,7 +28,7 @@ La difference de comportement a ete validee par un test comparatif reel sur la v
 argus/SKILL.md              le protocole complet, autonome (la seule chose a installer)
 README.md                   ce fichier
 LICENSE                     conditions d'utilisation et de redistribution
-CHANGELOG.md                historique des versions (v1 a v5.0)
+CHANGELOG.md                historique des versions (v1 a v5.1)
 COMPARATIF-v4.2.md          ce que le protocole change, mesure sur un test reel
 PROVENANCE.md               empreintes SHA-256 scellees (preuve d'origine)
 PROVENANCE.sha256           fichier de verification (sha256sum -c)
@@ -50,7 +50,7 @@ Si tu remplaces une version anterieure d'Argus (v1 a v4.2, quel que soit son for
 
 Le protocole est entierement generique. Tu peux ajouter tes propres regles non negociables en tete de la section "Protocole" du `SKILL.md` ; conserve alors l'avis de copyright et signale tes modifications (LICENSE, article 2).
 
-## Nouveautes de la v5.0
+## Nouveautes de la v5.1
 
 - Calibration (section 4) : un changement de generation de modele ou d outil invalide les caracteristiques mesurees sur la precedente (quota, debit, fenetre de contexte, tarif). Re-mesurer avant d affirmer, et dire ce qui ne l a pas ete.
 - Economie de contexte (section 14) : une fenetre de contexte plus grande est une capacite, pas une autorisation de la remplir. Le contexte porte reste refacture a chaque appel d outil, donc le plafond de travail par session ne bouge pas.
