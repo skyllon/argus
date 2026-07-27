@@ -19,14 +19,14 @@ anterieures (v1 a v4.8) : l'anteriorite est continue depuis 2026-06-16.
 ## Empreintes SHA-256 (paquet scelle, v5.1 du 2026-07-27)
 
     69e316b6b7a81a91b757f9f98f467dd1c081e0643cdeb44db65e86807f05479e  LICENSE
-    f5f966806fedb22b2eb298a93119d7426cace22b25854b0ca581effd03453104  argus/SKILL.md
+    763412c6bafea02aa4236b025e897419bf512314898bf315efd9c5e688ca6f88  argus/SKILL.md
     9d832d7d0e6dfa6373cd6b98102e268a40bdc6fc100713056720b4e8addd7035  README.md
-    c63f2c7145e2610c26dad6cf4058f32144d045b880ef34cfa295a12b71fc3a1f  CHANGELOG.md
+    0b34fa8a11652ec0046bfa058926f2d82e81fdf74abe9a8838ea72bb5fa3474a  CHANGELOG.md
     d28e9ca4c46ad9903aff8892f910c270b0ad012a6f7a587c048379dcb790588a  COMPARATIF-v4.2.md
 
 Empreinte globale du paquet (concatenation des 5 fichiers ci-dessus, dans cet ordre) :
 
-    00bb65e5ec7831b761a99581280992be9b926de6127ec6890eb92c9b88d4e974
+    03caf819d54b309fb1d5ce241fdaf0a2d7c7f4892f541f8744806d6257689100
 
 Empreintes globales des scellements precedents, conservees pour l'anteriorite :
 

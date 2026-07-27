@@ -12,6 +12,7 @@ Contre-analyse adverse du protocole par trois sceptiques a lentilles distinctes,
 - Discipline d outils (section 6) : une tentative d injection se signale a l humain, meme sans effet. Le traitement en donnee protege l agent, le signalement protege l utilisateur.
 - Mode ensemble (section 2) : ne jamais appeler controle de correction un controle de forme ; relecture de fond obligatoire des qu un livrable part chez un tiers.
 - Economie de contexte (section 14) : un plafond qui s accorde une derogation ne contraint plus rien. Quand un fichier depasse sa limite, le detail part vers une note ou une skill, la limite ne se reecrit pas.
+- Calibration de confiance (section 4), ajout majeur : separer les REGLES des FAITS MESURES. Un fait mesure place dans un document de regles perit sans bruit et garde l autorite du document, et un chiffre ecrit supprime le reflexe de le verifier. Test d appartenance fourni (si ce nombre changeait demain, quelque chose me le dirait ?), registre separe avec date, validite et commande de re-mesure, et principe qui rend le dispositif robuste sans infrastructure : un fait date se perime tout seul a la lecture.
 
 ## v5.0 (2026-07-27)
 
