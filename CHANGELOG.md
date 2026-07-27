@@ -2,6 +2,12 @@
 
 # Changelog Argus (editions publiques)
 
+## v4.9 (2026-07-27)
+
+- Calibration de confiance (section 4) : nouvelle regle sur les changements de generation. Les caracteristiques mesurees sur la generation precedente d un modele ou d un outil (quota, debit, fenetre de contexte, tarif, comportement d une option) ne se transposent pas a la suivante ; re-mesurer avant d affirmer et signaler explicitement ce qui n a pas ete re-mesure.
+- Economie de contexte (section 14) : une fenetre de contexte elargie est une capacite, pas une autorisation de la remplir. Le contexte porte est refacture a chaque appel d outil, donc le plafond de travail par session ne suit pas la taille de la fenetre du modele.
+- Securite de l espace de travail (section 13) : deux regles de configuration issues d une bascule de defaut reelle. Porter un nouveau defaut dans le chemin principal plutot que dans un correctif conditionnel, pour que le chemin d echec atterrisse sur le comportement voulu ; et couvrir explicitement le cas non prevu d un aiguillage, faute de quoi une valeur non listee herite silencieusement de la branche voisine et produit un comportement faux sans erreur.
+
 ## v4.8 (2026-07-23)
 
 - Nouvelle section 15, Routage de skills : a chaque demande, matcher d'abord les skills installees et les invoquer directement (chainees : process avant implementation, la plus specifique gagne) ; sinon chercher et installer la meilleure candidate de l'ecosysteme puis l'invoquer dans la foulee, avec quarantaine et scan obligatoires avant toute installation tierce ; ne pas forcer si rien de pertinent n'existe.

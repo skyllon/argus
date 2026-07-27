@@ -1,4 +1,4 @@
-<!-- Argus (TM) v4.8 - Copyright (c) 2026 skyllon. Tous droits reserves. Licence : voir LICENSE. Empreinte ARGUS-PB-2026-8de20fbe89. -->
+<!-- Argus (TM) v4.9 - Copyright (c) 2026 skyllon. Tous droits reserves. Licence : voir LICENSE. Empreinte ARGUS-PB-2026-8de20fbe89. -->
 
 # Argus : le protocole operationnel d'elite pour Claude Code
 
@@ -28,7 +28,7 @@ La difference de comportement a ete validee par un test comparatif reel sur la v
 argus/SKILL.md              le protocole complet, autonome (la seule chose a installer)
 README.md                   ce fichier
 LICENSE                     conditions d'utilisation et de redistribution
-CHANGELOG.md                historique des versions (v1 a v4.8)
+CHANGELOG.md                historique des versions (v1 a v4.9)
 COMPARATIF-v4.2.md          ce que le protocole change, mesure sur un test reel
 PROVENANCE.md               empreintes SHA-256 scellees (preuve d'origine)
 PROVENANCE.sha256           fichier de verification (sha256sum -c)
@@ -50,11 +50,11 @@ Si tu remplaces une version anterieure d'Argus (v1 a v4.2, quel que soit son for
 
 Le protocole est entierement generique. Tu peux ajouter tes propres regles non negociables en tete de la section "Protocole" du `SKILL.md` ; conserve alors l'avis de copyright et signale tes modifications (LICENSE, article 2).
 
-## Nouveautes de la v4.8
+## Nouveautes de la v4.9
 
-- Routage de skills (nouvelle section 15) : les skills installees qui couvrent la demande sont invoquees directement, chainees si besoin (process avant implementation) ; si aucune ne correspond, recherche et installation de la meilleure candidate de l'ecosysteme, avec quarantaine et scan obligatoires avant toute installation tierce.
-- Economie de contexte durcie (section 14, lecons d'un incident reel de thrashing) : persistance d'etat ANTICIPEE avant le seuil (aucun hook ne peut la forcer au dernier moment : la raison d'un blocage PreCompact n'atteint jamais le modele) ; seuil d'auto-compaction place au-dessus du plancher incompressible de la session, sinon la fenetre se re-remplit apres chaque resume ; gros fichiers lus par morceaux.
-- Une compaction en plein travail ne termine pas la tache : reprise immediate, sans repartir de zero.
+- Calibration (section 4) : un changement de generation de modele ou d outil invalide les caracteristiques mesurees sur la precedente (quota, debit, fenetre de contexte, tarif). Re-mesurer avant d affirmer, et dire ce qui ne l a pas ete.
+- Economie de contexte (section 14) : une fenetre de contexte plus grande est une capacite, pas une autorisation de la remplir. Le contexte porte reste refacture a chaque appel d outil, donc le plafond de travail par session ne bouge pas.
+- Securite de l espace de travail (section 13) : quand le defaut d un systeme change, porter le nouveau comportement dans le chemin principal plutot que dans un correctif conditionnel, pour que le chemin d echec atterrisse sur le bon defaut ; et couvrir explicitement le cas non prevu d un aiguillage, sans quoi une valeur non listee herite en silence de la branche voisine.
 
 Historique complet : `CHANGELOG.md`.
 
