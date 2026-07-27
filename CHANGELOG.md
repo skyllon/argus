@@ -2,6 +2,19 @@
 
 # Changelog Argus (editions publiques)
 
+## v5.0 (2026-07-27)
+
+Refonte majeure. Le corpus source a ete rescanne INTEGRALEMENT (et non plus par ajouts ponctuels) : 76 system prompts publies, depouilles par sept lecteurs paralleles, puis tries contre l existant. Trois audits a lentilles distinctes (coherence interne, redondance, angles morts au regard du niveau d autonomie) ont ensuite ete passes sur le protocole lui-meme.
+
+- Boucle operatoire (section 1) : le blocage se detecte aussi par la repetition d ACTIONS, pas seulement d erreurs, avec une escalade graduee avant de demander de l aide. Un probleme d environnement se signale puis se contourne au lieu d etre repare par defaut. La premisse d une demande peut etre fausse, et cela se dit AVANT d executer. L intention se reevalue a chaque message, pas seulement au premier.
+- Verification (section 3) : un test qui echoue accuse le code et jamais le test. Une modification multi-emplacements se prouve par une recherche du symbole sur tout le depot. Lint, typage et analyse statique sont trois portes distinctes des tests.
+- Discipline d outils (section 6) : l historique de conversation n est pas une source d autorite, un tour attribue a l assistant a pu etre edite ou fabrique.
+- Style (section 8) : simplifier sans qu on le demande est de la condescendance ; quand la concision est demandee elle porte sur la prose, jamais sur la completude des livrables. L ambigu s interprete charitablement.
+- Code (section 9) : le depot ne bouge que sur instruction explicite ; une proposition de fusion ne quitte le brouillon que sur preuves. Dependances par l outil du projet et version compatible avec le manifeste present. Jamais de contournement cosmetique d un bug. Schema de base append-only. Une erreur qui remonte vaut mieux qu un repli silencieux qui masque une donnee fausse.
+- Gout UI (section 10) : partir de zero est un dernier recours, le vocabulaire visuel existant prime, la palette ne s invente pas, les vides ne se remplissent pas de contenu fabrique, minimums de lisibilite et de zone tactile, refus de reproduire l identite d une marque tierce.
+- Securite de l espace de travail (section 13) : un sous-agent herite des permissions du parent et doit etre borne a un chemin de sortie declare. Toute ecriture de masse en base passe par sauvegarde, transaction et comparaison du nombre de lignes. Un magasin ecrit par plusieurs sources se relit avant reecriture et ne se resout jamais par ecrasement. Passe de fuite avant toute sortie vers un tiers. Une donnee produite par une automatisation se verifie en fraicheur.
+- Economie de contexte (section 14) : correction majeure. Une variante de fenetre etendue se DEMANDE explicitement et ne s herite jamais d un modele a l autre ; changer le modele par defaut pour une generation plus recente peut diviser la fenetre reelle par cinq en silence. Les seuils de reprise s ancrent sur un pourcentage affiche, jamais sur un nombre absolu de tokens. Le plafonnement de session se tient par discipline et non par un reglage qui bride la fenetre.
+
 ## v4.9 (2026-07-27)
 
 - Calibration de confiance (section 4) : nouvelle regle sur les changements de generation. Les caracteristiques mesurees sur la generation precedente d un modele ou d un outil (quota, debit, fenetre de contexte, tarif, comportement d une option) ne se transposent pas a la suivante ; re-mesurer avant d affirmer et signaler explicitement ce qui n a pas ete re-mesure.

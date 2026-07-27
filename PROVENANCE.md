@@ -1,10 +1,10 @@
-# Provenance et integrite - Argus (TM) v4.9
+# Provenance et integrite - Argus (TM) v5.0
 
 Copyright (c) 2026 skyllon. Tous droits reserves.
 Contact : https://github.com/skyllon
 
-Ce fichier scelle le paquet Argus v4.9 (scellement du 2026-07-27, remplace le
-scellement v4.8 du 2026-07-23). Il sert de preuve d'origine et permet de
+Ce fichier scelle le paquet Argus v5.0 (scellement v5.0 du 2026-07-27, remplace le
+scellement v4.9 du meme jour). Il sert de preuve d'origine et permet de
 detecter toute alteration. Voir `LICENSE` pour les conditions d'utilisation.
 
 ## Empreinte de provenance (canary)
@@ -16,17 +16,17 @@ comme celle de skyllon. Le retirer ou l'alterer constitue une violation
 de licence (LICENSE, articles 3 et 5). Le meme marqueur scelle les versions
 anterieures (v1 a v4.8) : l'anteriorite est continue depuis 2026-06-16.
 
-## Empreintes SHA-256 (paquet scelle, v4.9 du 2026-07-27)
+## Empreintes SHA-256 (paquet scelle, v5.0 du 2026-07-27)
 
     69e316b6b7a81a91b757f9f98f467dd1c081e0643cdeb44db65e86807f05479e  LICENSE
-    eb7f4c71c9e7c17ee35cad68d0f73dd33250ae2f113e6275112663866e2b3db0  argus/SKILL.md
-    493d43b5fee0e14cd890be16cdff2936b27c461e02e05c92fd6e4eb1b9bf6aeb  README.md
-    79f96aa60512af42a49e66f88f6af14142a47df97585bb06867645b40996ee52  CHANGELOG.md
+    6b473b28046a7ceaafc4246a94e1856d01cf32d6af556cead1f91d1ff839de90  argus/SKILL.md
+    be37a9d27cc98cfa95cd7aac13867420a94f3164ec1897ea999951554ed0f537  README.md
+    d101efddaee3ff7c405a66cd561ec14d5c33dcd7e321f3043bccafd59e485706  CHANGELOG.md
     d28e9ca4c46ad9903aff8892f910c270b0ad012a6f7a587c048379dcb790588a  COMPARATIF-v4.2.md
 
 Empreinte globale du paquet (concatenation des 5 fichiers ci-dessus, dans cet ordre) :
 
-    66a6d26aa92400bce3dee5b9e4da794eeeaf21e49cf1af3534a60123a2c6516d
+    6fa38e72b4a9678123aa082dcd04e249fd62e30bec948e2da80f25cfdf08d9f1
 
 Empreintes globales des scellements precedents, conservees pour l'anteriorite :
 
